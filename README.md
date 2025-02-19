@@ -81,7 +81,7 @@ This section explains how to build mlir-xten and provide python bindings for xte
   cmake --build .
   ```
 - ##### Run Testcases
-    - Example to count number of InCoreChains xten_nn.SubgraphOp 
+   Example to count number of InCoreChains xten_nn.SubgraphOp 
    ```
    setenv PYTHONPATH ~/workspace/vaiml2aieIR/mlir-xten/build/python_packages/xten:${PYTHONPATH}
    cd ~/workspace/vaiml2aieIR/mlir-xten/test/mlir-xten
