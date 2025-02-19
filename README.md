@@ -70,10 +70,11 @@ This section explains how to build mlir-xten and provide python bindings for xte
   ```
   cd mlir-xten
   mkdir build && cd build
-  set MLIR_DIR= ""
-  set BUILD_DIR = ""
-  cmake -G Ninja .. -DMLIR_DIR=$PREFIX/lib/cmake/mlir -DLLVM_EXTERNAL_LIT=$BUILD_DIR/bin/llvm-lit
-  cmake --build . --target check-standalone
+  setenv BUILD_DIR "~/workspace/vaiml2aieIR/testFork/mlir-xten/llvm-project/build"
+  setenv INSTALL_DIR "~/workspace/vaiml2aieIR/testFork/mlir-xten/llvm-project/install"
+  cmake -G Ninja .. -DMLIR_DIR=$INSTALL_DIR/lib/cmake/mlir -DLLVM_EXTERNAL_LIT=$BUILD_DIR/bin/llvm-lit
+  cmake --build .
+
   ```
 - ##### Run Testcases
    ```
