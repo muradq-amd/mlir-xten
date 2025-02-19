@@ -1,4 +1,4 @@
-# __init__.py - Top Level Python Module for xten installation
+# xten_nn.py - Top Level Python Module for xten_nn dialect
 #
 # Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -9,4 +9,5 @@
 
 # 
 
-"""Top Level Module Definition for XTen ython Bindings"""
+from ._xten_nn_ops_gen import *
+from .._mlir_libs._xten_nnDialects.xten_nn import *
