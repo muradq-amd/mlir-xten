@@ -19,19 +19,18 @@ This section explains how to build mlir-xten python package.
     cd mlir-xten
     git submodule update --init --recursive
     ```
-### Create a virtual Env
-conda create --name mlirdev python=3.10
-conda activate mlirdev
-
-### Install requirements
-// Reuse the requirements from mlir. mlir-xten is an extension to mlir and should work under the same environment.
-pip install --upgrade pip
-pip install -r ./llvm-project/mlir/python/requirements.txt
-
-### Install conda packages
-conda install conda-forge::ninja 
-conda install conda-forge::sccache
-
+### Create venv and install requirements
+    ```
+    conda create --name mlirdev python=3.10
+    conda activate mlirdev
+    # Reuse the requirements from mlir. mlir-xten is an extension to mlir and should work under the same environment.
+    pip install --upgrade pip
+    pip install -r ./llvm-project/mlir/python/requirements.txt
+    
+    # Install conda packages
+    conda install conda-forge::ninja 
+    conda install conda-forge::sccache
+```
 ### Setup Env variables
 setenv PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/bin:${PATH}
 setenv PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin:${PATH}
