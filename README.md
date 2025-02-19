@@ -30,7 +30,7 @@ This section explains how to build mlir-xten python package.
     # Install conda packages
     conda install conda-forge::ninja 
     conda install conda-forge::sccache
-```
+    ```
 - #### Setup Env variables
     ```
     setenv PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/bin:${PATH}
