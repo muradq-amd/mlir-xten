@@ -25,8 +25,8 @@ This section explains how to build mlir-xten and provide python bindings for xte
     ```
     conda create --name mlirdev python=3.10
     conda activate mlirdev
-    # Reuse the requirements from mlir.
-    # mlir-xten is an extension of MLIR and should work under the same environment.
+
+    # mlir-xten is an extension of MLIR and works under the same environment
     pip install --upgrade pip
     pip install -r ./llvm-project/mlir/python/requirements.txt
     
@@ -81,8 +81,8 @@ This section explains how to build mlir-xten and provide python bindings for xte
 
 
 ## References:
-- https://mlir.llvm.org/docs/Bindings/Python/
-- [https://github.com/Xilinx/llvm-project/mlir/examples/standalone]([https://xilinx.github.io/mlir-xten/](https://github.com/Xilinx/llvm-project/tree/479c8d676f1fff3c839478beaeb1e17565a36275/mlir/examples/standalone)) 
+    - https://mlir.llvm.org/docs/Bindings/Python/
+    - [https://github.com/Xilinx/llvm-project/mlir/examples/standalone]([https://xilinx.github.io/mlir-xten/](https://github.com/Xilinx/llvm-project/tree/479c8d676f1fff3c839478beaeb1e17565a36275/mlir/examples/standalone)) 
     
     
  
