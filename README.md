@@ -13,7 +13,7 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 This section explains how to build mlir-xten python package.
 
-- #### Clone and setup mlir-xten repo
+- ##### Clone and setup mlir-xten repo
     ```
     git clone https://github.com/Xilinx/mlir-xten.git
     cd mlir-xten
@@ -23,7 +23,8 @@ This section explains how to build mlir-xten python package.
     ```
     conda create --name mlirdev python=3.10
     conda activate mlirdev
-    # Reuse the requirements from mlir. mlir-xten is an extension to mlir and should work under the same environment.
+    # Reuse the requirements from mlir.
+    # mlir-xten is an extension of MLIR and should work under the same environment.
     pip install --upgrade pip
     pip install -r ./llvm-project/mlir/python/requirements.txt
     
@@ -44,8 +45,6 @@ This section explains how to build mlir-xten python package.
         -Bbuild \
         llvm-project/llvm \
         -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_C_COMPILER=clang-12 \
-        -DCMAKE_CXX_COMPILER=clang++-12 \
         -DLLVM_ENABLE_PROJECTS="llvm;mlir" \
         -DLLVM_TARGETS_TO_BUILD=host \
         -DCMAKE_INSTALL_PREFIX=../install \
