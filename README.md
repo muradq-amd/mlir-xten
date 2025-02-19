@@ -1,6 +1,7 @@
 <!--- (c) Copyright 2021 Xilinx, Inc. All Rights reserved.--->
 <!--- (c) Copyright 2022 - 2024 Advanced Micro Devices, Inc. All Rights reserved.--->
 
+
 # Extensions to Torch-MLIR
 
 ![](https://mlir.llvm.org//mlir-logo.png)
@@ -9,9 +10,10 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 [Full Documentation](https://xilinx.github.io/mlir-xten/)
 
+
 ## How to Build
 
-This section explains how to build mlir-xten python package.
+This section explains how to build mlir-xten and provide python bindings for xten_nn dialect.
 
 - ##### Clone and setup the mlir-xten repo
     ```
@@ -38,6 +40,8 @@ This section explains how to build mlir-xten python package.
     setenv PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin:${PATH}
     setenv LD_LIBRARY_PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/lib:${LD_LIBRARY_PATH}
     setenv LD_LIBRARY_PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/lib64:${LD_LIBRARY_PATH}
+    setenv CC /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin/gcc
+    setenv CXX /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin/g++
     ```
 - ##### Build LLVM and MLIR
     ```
@@ -65,8 +69,13 @@ This section explains how to build mlir-xten python package.
   ```
 - ##### Run Testcases
   ```
-  setenv PYTHONPATH /home/muradq/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
+  setenv PYTHONPATH ~/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
 
   ```
+
+ ## References:
+    - https://mlir.llvm.org/docs/Bindings/Python/
+
+ 
 -----
 <p align="center">Copyright&copy; 2019-2021 Xilinx</p>
