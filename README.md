@@ -31,7 +31,8 @@ This section explains how to build mlir-xten and provide python bindings for xte
     pip install -r ./llvm-project/mlir/python/requirements.txt
     
     # Install conda packages
-    conda install conda-forge::ninja 
+    conda install conda-forge::ninja
+    conda install libgcc -c conda-forge
     conda install conda-forge::sccache
     ```
 - ##### Setup Env Variables
@@ -66,12 +67,18 @@ This section explains how to build mlir-xten and provide python bindings for xte
     ```
 - ##### Build mlir-xten
   ```
+  cd mlir-xten
+  mkdir build && cd build
+  set MLIR_DIR= ""
+  set BUILD_DIR = ""
+  cmake -G Ninja .. -DMLIR_DIR=$PREFIX/lib/cmake/mlir -DLLVM_EXTERNAL_LIT=$BUILD_DIR/bin/llvm-lit
+  cmake --build . --target check-standalone
   ```
 - ##### Run Testcases
   ```
   setenv PYTHONPATH ~/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
-
   ```
+
 
 ## References:
     - https://mlir.llvm.org/docs/Bindings/Python/
