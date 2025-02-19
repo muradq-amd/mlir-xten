@@ -73,9 +73,11 @@ This section explains how to build mlir-xten and provide python bindings for xte
 
   ```
 
- ## References:
+## References:
     - https://mlir.llvm.org/docs/Bindings/Python/
-
+    -[https://github.com/Xilinx/llvm-project/mlir/examples/standalone]([https://xilinx.github.io/mlir-xten/](https://github.com/Xilinx/llvm-project/tree/479c8d676f1fff3c839478beaeb1e17565a36275/mlir/examples/standalone)) 
+    
+    
  
 -----
 <p align="center">Copyright&copy; 2019-2021 Xilinx</p>
