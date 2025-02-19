@@ -15,13 +15,13 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 This section explains how to build mlir-xten and provide python bindings for xten_nn dialect.
 
-- ##### Clone and setup the mlir-xten repo
+- ##### Clone and Setup the mlir-xten Repo
     ```
     git clone https://github.com/Xilinx/mlir-xten.git
     cd mlir-xten
     git submodule update --init --recursive
     ```
-- ##### Create venv and install requirements
+- ##### Create venv and Install Requirements
     ```
     conda create --name mlirdev python=3.10
     conda activate mlirdev
@@ -34,7 +34,7 @@ This section explains how to build mlir-xten and provide python bindings for xte
     conda install conda-forge::ninja 
     conda install conda-forge::sccache
     ```
-- ##### Setup Env variables
+- ##### Setup Env Variables
     ```
     setenv PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/bin:${PATH}
     setenv PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin:${PATH}
