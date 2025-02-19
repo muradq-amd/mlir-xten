@@ -13,13 +13,13 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 This section explains how to build mlir-xten python package.
 
-- ##### Clone and setup mlir-xten repo
+- ##### Clone and setup the mlir-xten repo
     ```
     git clone https://github.com/Xilinx/mlir-xten.git
     cd mlir-xten
     git submodule update --init --recursive
     ```
-- #### Create venv and install requirements
+- ##### Create venv and install requirements
     ```
     conda create --name mlirdev python=3.10
     conda activate mlirdev
@@ -32,14 +32,14 @@ This section explains how to build mlir-xten python package.
     conda install conda-forge::ninja 
     conda install conda-forge::sccache
     ```
-- #### Setup Env variables
+- ##### Setup Env variables
     ```
     setenv PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/bin:${PATH}
     setenv PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/bin:${PATH}
     setenv LD_LIBRARY_PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/lib:${LD_LIBRARY_PATH}
     setenv LD_LIBRARY_PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/lib64:${LD_LIBRARY_PATH}
     ```
-- #### Build LLVM and MLIR
+- ##### Build LLVM and MLIR
     ```
     cmake -GNinja \
         -Bbuild \
@@ -60,7 +60,10 @@ This section explains how to build mlir-xten python package.
     cmake --build build | & tee build.log
     cmake --build build --target install | & tee install.log
     ```
-- #### Run Testcases
+- ##### Build mlir-xten
+  ```
+  ```
+- ##### Run Testcases
   ```
   setenv PYTHONPATH /home/muradq/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
 
