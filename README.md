@@ -75,9 +75,9 @@ This section explains how to build mlir-xten and provide python bindings for xte
   cmake --build . --target check-standalone
   ```
 - ##### Run Testcases
-  ```
+ 
   setenv PYTHONPATH ~/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
-  ```
+ 
 
 
 ## References:
