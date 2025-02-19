@@ -13,11 +13,12 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 This section explains how to build mlir-xten python package.
 
-### Clone and setup mlir-xten repo
-git clone https://github.com/Xilinx/mlir-xten.git
-cd mlir-xten
-git submodule update --init --recursive
-
+- ### Clone and setup mlir-xten repo
+    ```
+    git clone https://github.com/Xilinx/mlir-xten.git
+    cd mlir-xten
+    git submodule update --init --recursive
+    ```
 ### Create a virtual Env
 conda create --name mlirdev python=3.10
 conda activate mlirdev
