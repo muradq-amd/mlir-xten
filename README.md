@@ -32,8 +32,9 @@ This section explains how to build mlir-xten and provide python bindings for xte
     
     # Install conda packages
     conda install conda-forge::ninja
-    conda install libgcc -c conda-forge
     conda install conda-forge::sccache
+    conda install -c conda-forge pybind11
+    conda install libgcc -c conda-forge
     ```
 - ##### Setup Env Variables
     ```
@@ -68,21 +69,23 @@ This section explains how to build mlir-xten and provide python bindings for xte
     ```
 - ##### Build mlir-xten
   ```
-  setenv BUILD_DIR "~/workspace/vaiml2aieIR/testFork/mlir-xten/llvm-project/build"
-  setenv INSTALL_DIR "~/workspace/vaiml2aieIR/testFork/mlir-xten/llvm-project/install"
+  setenv BUILD_DIR "~/workspace/vaiml2aieIR/mlir-xten/llvm-project/build" 
 
   cd mlir-xten
   mkdir build && cd build
   
   cmake -G Ninja .. \
-  -DMLIR_DIR=$INSTALL_DIR/lib/cmake/mlir \
-  -DLLVM_EXTERNAL_LIT=$BUILD_DIR/bin/llvm-lit
+  -DMLIR_XTEN_ENABLE_TORCH=OFF \
+  -DMLIR_DIR=${BUILD_DIR}/lib/cmake/mlir 
 
   cmake --build .
   ```
 - ##### Run Testcases
+    - Example to count number of InCoreChains xten_nn.SubgraphOp 
    ```
-  setenv PYTHONPATH ~/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
+   setenv PYTHONPATH ~/workspace/vaiml2aieIR/mlir-xten/build/python_packages/xten:${PYTHONPATH}
+   cd ~/workspace/vaiml2aieIR/mlir-xten/test/mlir-xten
+   python ./test1.py
    ```
 
 
