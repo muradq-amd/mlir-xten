@@ -38,7 +38,7 @@ This section explains how to build mlir-xten python package.
     setenv LD_LIBRARY_PATH /group/xrlabs/tools/x86_64_RHEL7_clang12/lib:${LD_LIBRARY_PATH}
     setenv LD_LIBRARY_PATH /tools/batonroot/rodin/devkits/lnx64/gcc-10.2.0/lib64:${LD_LIBRARY_PATH}
     ```
-- ### Build LLVM and MLIR
+- #### Build LLVM and MLIR
     ```
     cmake -GNinja \
         -Bbuild \
@@ -58,9 +58,13 @@ This section explains how to build mlir-xten python package.
         -DCMAKE_CXX_COMPILER_LAUNCHER=sccache \
         -DMLIR_ENABLE_BINDINGS_PYTHON=ON  | & tee cmake.log
     
-    cmake --build build
-    cmake --build build --target install
+    cmake --build build | & tee build.log
+    cmake --build build --target install | & tee install.log
     ```
+- #### Run Testcases
+  ```
+  setenv PYTHONPATH /home/muradq/workspace/vaiml2aie/mlir-xten/build/tools/mlir/python_packages/mlir_core:${PYTHONPATH}
 
+  ```
 -----
 <p align="center">Copyright&copy; 2019-2021 Xilinx</p>
