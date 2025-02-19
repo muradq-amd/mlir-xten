@@ -86,8 +86,7 @@ This section explains how to build mlir-xten and provide python bindings for xte
    cd ~/workspace/vaiml2aieIR/mlir-xten/test/mlir-xten
    python ./test1.py
    ```
-   test1.py counts number of InCoreChains xten_nn.SubgraphOp 
-
+   This test case reads the MLIR module and counts the number of InCoreChains in xten_nn.SubgraphOp.
 
 ## References:
 - https://mlir.llvm.org/docs/Bindings/Python/
