@@ -19,7 +19,7 @@ This section explains how to build mlir-xten python package.
     cd mlir-xten
     git submodule update --init --recursive
     ```
-### Create venv and install requirements
+- ### Create venv and install requirements
     ```
     conda create --name mlirdev python=3.10
     conda activate mlirdev
