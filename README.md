@@ -9,5 +9,15 @@ This repository contains Xilinx extensions to the torch-mlir ATen dialect to ena
 
 [Full Documentation](https://xilinx.github.io/mlir-xten/)
 
+# How to Build
+
+This section explains how to build mlir-xten python package.
+
+## clone mlir-xten 
+git clone https://github.com/Xilinx/mlir-xten.git
+cd mlir-xten
+git submodule update --init --recursive
+
+
 -----
 <p align="center">Copyright&copy; 2019-2021 Xilinx</p>
